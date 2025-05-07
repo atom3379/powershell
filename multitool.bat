@@ -80,5 +80,5 @@ timeout /t 2 >nul
 goto menu
 
 :guimode
-powershell -Command "% iwr https://raw.githubusercontent.com/atom3379/powershell/refs/heads/main/multitool.ps1 | iex"
+powershell -Command "& iwr https://raw.githubusercontent.com/atom3379/powershell/refs/heads/main/multitool.ps1 | iex"
 exit
