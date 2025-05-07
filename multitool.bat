@@ -38,8 +38,8 @@ set /p choice="Choose an option (1-10): "
     if "%choice%"=="9" goto guimode
 
 :delself
+del "%temp%\temp_script.bat"
 exit
-del "%temp%\temp_script.bat"s
 
 :chrome
 echo Opening Google Chrome...
