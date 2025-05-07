@@ -34,8 +34,12 @@ set /p choice="Choose an option (1-10): "
     if "%choice%"=="5" goto restart
     if "%choice%"=="6" goto bios
     if "%choice%"=="7" goto wsl
-    if "%choice%"=="8" exit
+    if "%choice%"=="8" goto delself
     if "%choice%"=="9" goto guimode
+
+:delself
+exit
+del "%temp%\temp_script.bat"s
 
 :chrome
 echo Opening Google Chrome...
@@ -81,4 +85,3 @@ goto menu
 
 :guimode
 powershell -Command "& iwr https://raw.githubusercontent.com/atom3379/powershell/refs/heads/main/multitool.ps1 | iex"
-exit
